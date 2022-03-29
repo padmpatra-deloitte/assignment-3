@@ -3,7 +3,9 @@ import '../styles/hero.scss'
 
 function Hero() {
     return (
-        <section className='hero'></section>
+        <section className='hero'>
+            <h1>Home</h1>
+        </section>
     );
 }
 

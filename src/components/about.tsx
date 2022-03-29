@@ -4,6 +4,7 @@ import AboutCard from "./AboutCard";
 function About() {
     return (
         <div className="about">
+            <h1>About</h1>
             <div className="about-header">
                 <h4>Overview</h4>
                 <p>

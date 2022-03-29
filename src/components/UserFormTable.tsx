@@ -18,7 +18,7 @@ export default function UserFormTable() {
     return (
         <div className="user-form-table">
             <h1>User</h1>
-            <UserForm setUser={setUser} length={users.length}/>
+            <UserForm setUser={setUser}/>
             <UserTable users={users} setUser={setUser}/>
         </div>
     );

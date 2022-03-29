@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../styles/UserForm.scss';
 import axios from "axios";
+import { v4 as uuidv4 } from 'uuid';
 
 export default function UserForm(props: any) {
 
@@ -17,7 +18,7 @@ export default function UserForm(props: any) {
     function onSubmit(e: any) {
         e.preventDefault();        
         axios.post('http://localhost:3004/users', {
-            id: props.length + 1,
+            id: uuidv4(),
             ...form
         }).then(resp => {
             console.log(resp.data);

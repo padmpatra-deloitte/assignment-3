@@ -15,6 +15,7 @@ function Nav() {
                 <nav className="menu">
 
                     <Link to={'/'}>Home</Link>
+                    <Link to={'/user'}>User</Link>
                     <Link to={'/about'}>About</Link>
                     <Link to={'/contact'}>Contact</Link>
                 </nav>

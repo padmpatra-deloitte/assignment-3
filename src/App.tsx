@@ -9,6 +9,7 @@ import Home from './components/home';
 import Contact from './components/contact';
 import Error from './components/errror';
 import Nav from './components/nav';
+import UserFormTable from './components/UserFormTable';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />}/>
+          <Route path="/user" element={<UserFormTable />}/>
           <Route path="/" element={<Home />} />
           <Route path='*' element={<Error />} />
           

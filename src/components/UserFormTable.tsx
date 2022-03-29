@@ -5,11 +5,11 @@ import UserTable from "./UserTable";
 import axios from "axios";
 
 export default function UserFormTable() {
-    const [users, setUsers] = useState([])
+    const [users, setUser] = useState([])
 
     useEffect(() => {
         axios.get('http://localhost:3004/users').then(resp => {
-            setUsers(resp.data)
+            setUser(resp.data)
         }).catch(error => {
             console.log(error);
         });
@@ -17,8 +17,9 @@ export default function UserFormTable() {
     },[])
     return (
         <div className="user-form-table">
-            <UserForm />
-            <UserTable users={users}/>
+            <h1>User</h1>
+            <UserForm setUser={setUser} length={users.length}/>
+            <UserTable users={users} setUser={setUser}/>
         </div>
     );
 }
